@@ -12,6 +12,7 @@ class UserController extends Controller
             'email'=>['required', 'email'],
             'password'=>['required', 'min:8', 'max:30'],
         ]);
+        
         return "Hello from our controller";
     }
 }
