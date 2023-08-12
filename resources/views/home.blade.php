@@ -15,6 +15,7 @@
               <button class="btn btn-secondary">Logout</button>
           </form>
 
+
           <div class="border container mt-5 p-4">
               <h2>Create new post</h2>
               <form action="/create-post" method="POST">
@@ -32,6 +33,18 @@
                  </div>
                  <button class="btn btn-secondary">Post Blog</button>
               </form>
+          </div>
+
+          <div class="container">
+               <div class="border">
+                  <h2>All Posts</h2>
+                  @foreach($posts as $post)
+                      <div class="bg-white shadow p-4 shadow mb-4">
+                          <h3>{{$post['title']}}</h3>
+                          {{$post['body']}}
+                      </div>
+                  @endforeach
+               </div>
           </div>
     @else
             <div class="container mt-5 border p-3">
