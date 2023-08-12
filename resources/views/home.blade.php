@@ -10,6 +10,10 @@
     @auth
 
           <p>Congrates!!. You have logged in successfully</p>
+          <form action="/logout" method="post">
+              @csrf
+              <button class="btn btn-secondary">Logout</button>
+          </form>
     @else
             <div class="container mt-5 border p-3">
                 <h2 class="text-center">Register</h2>
