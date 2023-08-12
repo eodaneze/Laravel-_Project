@@ -16,25 +16,47 @@
           </form>
     @else
             <div class="container mt-5 border p-3">
-                <h2 class="text-center">Register</h2>
-                <form action="/register" method="POST">
-                @csrf 
-                    <div class="row">
-                        <div class="col-lg-12 mb-3">
-                        <label>Name</label>
-                        <input name="name" type="text" class="form-control">
+               <div class="row">
+                   <div class="col-lg-6">
+                        <h2 class="text-center">Register</h2>
+                        <form action="/register" method="POST">
+                        @csrf 
+                            <div class="row">
+                                <div class="col-lg-12 mb-3">
+                                <label>Name</label>
+                                <input name="name" type="text" class="form-control">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                <label>Email</label>
+                                <input name="email" type="text" class="form-control">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                <label>Password</label>
+                                <input name="password" type="password" class="form-control">
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary">Register</button>
+                        </form> 
+                   </div>
+                   <div class="col-lg-6">
+                    <h2 class="text-center">Login</h2>
+                    <form action="/login" method="POST">
+                    @csrf 
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                            <label>Name</label>
+                            <input name="loginname" type="text" class="form-control">
+                            </div>
+                            
+                            <div class="col-lg-12 mb-3">
+                            <label>Password</label>
+                            <input name="loginpassword" type="password" class="form-control">
+                            </div>
                         </div>
-                        <div class="col-lg-12 mb-3">
-                        <label>Email</label>
-                        <input name="email" type="text" class="form-control">
-                        </div>
-                        <div class="col-lg-12 mb-3">
-                        <label>Password</label>
-                        <input name="password" type="password" class="form-control">
-                        </div>
-                        <button class="btn btn-secondary">Register</button>
-                    </div>
-                </form> 
+                        <button class="btn btn-secondary">Login</button>
+                    </form> 
+                   </div>
+               </div>
         </div>
     @endauth
   
