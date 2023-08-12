@@ -14,6 +14,25 @@
               @csrf
               <button class="btn btn-secondary">Logout</button>
           </form>
+
+          <div class="border container mt-5 p-4">
+              <h2>Create new post</h2>
+              <form action="/create-post" method="POST">
+                  @csrf
+
+                 <div class="row">
+                      <div class="col-lg-12">
+                         <label>Title</label>
+                          <input type="text" name="title" class="form-control">
+                      </div>
+                      <div class="col-lg-12">
+                         <label>Body</label>
+                          <textarea class="form-control" name="body" id="" cols="30" rows="10"></textarea>
+                      </div>
+                 </div>
+                 <button class="btn btn-secondary">Post Blog</button>
+              </form>
+          </div>
     @else
             <div class="container mt-5 border p-3">
                <div class="row">
